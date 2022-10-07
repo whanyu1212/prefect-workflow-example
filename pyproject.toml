@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pandas"
+version = "0.1.0"
+description = ""
+authors = ["whanyu1212 <107110503+whanyu1212@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.23.3"
+prefect = "^2.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
