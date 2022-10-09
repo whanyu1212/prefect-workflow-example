@@ -1,0 +1,36 @@
+###
+### A complete description of a Prefect Deployment for flow 'simple_etl_pipeline'
+###
+name: simple_etl_pipeline_example
+description: null
+version: 880fe71745504b1ee9bc67d1bd853e0f
+# The work queue that will handle this deployment's runs
+work_queue_name: test
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: simple_etl_pipeline
+manifest_path: null
+storage: null
+path: /Users/hy/python-projects/ds-example-workflow/src
+entrypoint: etl_example.py:prefect_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
