@@ -4,6 +4,7 @@ import pandas as pd
 from datetime import datetime
 from prefect import task, flow
 
+
 @task
 def extract(url: str) -> dict:
     res = requests.get(url)
@@ -35,7 +36,7 @@ def load(data: pd.DataFrame, path: str) -> None:
 def prefect_flow():
     users = extract(url='https://jsonplaceholder.typicode.com/users')
     df_users = transform(users)
-    load(data=df_users, path=f'../data/users_{int(datetime.now().timestamp())}.csv')
+    load(data=df_users, path='../data/users_'+str(int(datetime.now().timestamp()))+'.csv')
 
 
 if __name__ == '__main__':
