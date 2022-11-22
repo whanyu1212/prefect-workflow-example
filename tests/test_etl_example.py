@@ -85,5 +85,9 @@ def prefect_test_fixture() -> None:
 def test_prefect_flow() -> None:
     """_summary_"""
     prefect_flow()
-    path = Path("../data/users_" + str(int(datetime.now().timestamp())) + ".csv")
+    path = Path(
+        "/workspaces/ds-example-workflow/data/users_"
+        + str(int(datetime.now().timestamp()))
+        + ".csv"
+    )
     assert path.is_file()

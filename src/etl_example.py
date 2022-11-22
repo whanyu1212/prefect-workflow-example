@@ -71,7 +71,9 @@ def prefect_flow():
     df_users = transform(users)
     load(
         data=df_users,
-        path="../data/users_" + str(int(datetime.now().timestamp())) + ".csv",
+        path="/workspaces/ds-example-workflow/data/users_"
+        + str(int(datetime.now().timestamp()))
+        + ".csv",
     )
 
 
